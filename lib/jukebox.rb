@@ -52,16 +52,15 @@ def exit_jukebox
 end
 
 def run(arg)
-  # help
   user = nil
-  unless user == "exit"
+  until user == "exit"
     puts "Please enter a command:"
     user = gets.strip.downcase
     case user
     when "exit"
       exit_jukebox
     when "help"
-      help
+      help 
     when "list"
       list(arg)
     when "play"
